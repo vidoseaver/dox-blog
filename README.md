@@ -16,7 +16,7 @@ Run `bundle exec rspec`
 * Add @doximity-review as a contributor on your fork and tag this account on your PR description.
 * Code Style Guide can be found [here](https://github.com/bbatsov/ruby-style-guide), use 2 soft-tabs.
 
-## A Few Considerations:
+## A Few Considerations
 
 * Tests are highly encouraged.
 * Don't disregard performance optimizations, sure there's a small amount of articles today, but what if there were 500k?
