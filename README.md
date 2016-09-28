@@ -8,13 +8,6 @@ Run `bin/setup` and then boot the app with `rails server`
 
 Run `bundle exec rspec`
 
-A few Considerations:
-
-* Tests are highly encouraged.
-* Don't disregard performance optimizations, sure there's a small amount of articles today, but what if there were 500k?
-* We're not concerned with styling, `/components` does have some guidance if you must.
-* Avoid pushing indentation changes to current files, this makes the changeset harder to read.
-
 ------------
 
 ## Assignment Instructions
@@ -23,9 +16,16 @@ A few Considerations:
 * Add @doximity-review as a contributor on your fork and tag this account on your PR description.
 * Code Style Guide can be found [here](https://github.com/bbatsov/ruby-style-guide), use 2 soft-tabs.
 
+## A Few Considerations:
+
+* Tests are highly encouraged.
+* Don't disregard performance optimizations, sure there's a small amount of articles today, but what if there were 500k?
+* We're not concerned with styling, `/components` does have some guidance if you must.
+* Avoid pushing indentation changes to current files, this makes the changeset harder to read.
+
 ## What to Expect after you Submit
 
-Our team will be notified and we'll review the submission within 2 days. We'll run code analysers to check for added complexity, code coverage, and adherednce to style. Most importantly three engineers will review your code. We're looking for clean, easy to read, maintainable code. Good test coverage, and performance considerations and optimizations are a plus as well. We know your time is valuable and appreciate you taking the time to complete this assignment.
+Our team will be notified and we'll review the submission within 2 days. We'll run code analysers to check for added complexity, spec coverage, and adherednce to style. Most importantly three engineers will review your code. We're looking for clean, easy to read, maintainable code. Good test coverage, and performance considerations and optimizations are a plus as well. We know your time is valuable and appreciate you taking the time to complete this assignment.
 
 
 ### Story 1
@@ -67,5 +67,5 @@ Search against article body and title. An article that contains the same
 word twice would have a relevancy score that is higher than an article
 which only contains the searched word once.
 
-Is your solution performant?
+Consider if your solution performant.
 ```
