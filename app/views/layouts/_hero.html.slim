@@ -1,0 +1,10 @@
+.row.hero
+
+  - if @hero_link
+    = link_to @hero_link do
+      .section
+        = yield :hero
+
+  - else
+    .section
+      = yield :hero

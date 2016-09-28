@@ -1,0 +1,31 @@
+.big
+  = form_for @page, url: (@page.persisted?? administrator_page_path(@page) : administrator_pages_path) do |form|
+    - if @page.errors.any?
+      .error_explanation
+        p = "#{pluralize(@page.errors.count, "error")} prohibited this page from being saved:"
+        ul
+          - @page.errors.full_messages.each do |message|
+            li = message
+    p
+      = form.label :title do
+      = form.text_field :title
+    p
+      = form.label :subtitle do
+      = form.text_field :subtitle
+    p
+      = form.label :hero_image_name do
+      = form.text_field :hero_image_name
+    p
+      = form.label :body do
+      = form.text_area :body, rows: '20'
+    p
+      = form.label :published do
+      = form.check_box :published
+    p
+      = form.label :featured do
+      = form.check_box :featured
+    p
+      = form.label :author do
+      = collection_select(:page, :author_id, Author.active, :id, :name, prompt: true)
+    p
+      = form.submit

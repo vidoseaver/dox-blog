@@ -1,0 +1,13 @@
+.article
+  - if img = article.hero_image_name.presence
+    = link_to article_path(article) do
+      - img = "heroes/#{img}"
+      .hero-secondary style='background-image: url("#{asset_path(img)}")'
+        h1 = article.title
+  p.article-body
+    = markdown(article.body || 'No content')
+  p.meta
+    = article.created_at.strftime("%b %d, %Y")
+    span.stick<> |
+    = article.author.name
+hr

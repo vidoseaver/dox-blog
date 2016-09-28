@@ -1,0 +1,35 @@
+.big
+  = form_for @article, url: (@article.persisted?? administrator_article_path(@article) : administrator_articles_path) do |form|
+    - if @article.errors.any?
+      .error_explanation
+        p = "#{pluralize(@article.errors.count, "error")} prohibited this article from being saved:"
+        ul
+          - @article.errors.full_messages.each do |message|
+            li = message
+    p
+      = form.label :title do
+      = form.text_field :title
+    p
+      = form.label :subtitle do
+      = form.text_field :subtitle
+    p
+      = form.label :hero_image_name do
+      = form.select :hero_image_name,
+        options_from_collection_for_select(HeroImage.limit(200), "name", "name", @article.hero_image_name), prompt: "Select a hero image"
+    p
+      = form.label :body do
+      = form.text_area :body, rows: '20'
+    p
+      = form.label :published do
+      = form.check_box :published
+    p
+      = form.label :featured do
+      = form.check_box :featured
+    p
+      = form.label :created_at do
+      = form.text_field :created_at
+    p
+      = form.label :author do
+      = collection_select(:article, :author_id, Author.active, :id, :name, prompt: true)
+    p
+      = form.submit

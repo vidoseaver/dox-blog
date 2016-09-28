@@ -1,0 +1,8 @@
+.row
+  .section
+    h1 Editing Page
+    hr
+    = render 'form'
+    hr
+    = link_to 'Preview Page', page_path(@page), class: 'btn'
+    =< link_to 'Cancel', administrator_pages_path, class: 'btn gray no-outline'

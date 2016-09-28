@@ -1,0 +1,10 @@
+.row
+  .section
+    .tabs
+      ul
+        li class="#{'here' if current_page?(administrator_articles_path)}"
+          = link_to "Articles", administrator_articles_path
+        li class="#{'here' if current_page?(administrator_pages_path)}"
+          = link_to "Pages", administrator_pages_path
+        li class="#{'here' if current_page?(administrator_authors_path)}"
+          = link_to "Authors", administrator_authors_path

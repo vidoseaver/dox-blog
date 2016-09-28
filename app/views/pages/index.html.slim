@@ -1,0 +1,35 @@
+- provide :body_class do
+  | articles-list has-hero articles
+
+- if @featured_page.present?
+  - @hero_asset = "heroes/#{@featured_page.hero_image_name}"
+  - content_for :hero do
+    - @hero_link = page_path(@featured_page)
+    h1
+      = @featured_page.title
+    h2
+      = @featured_page.subtitle
+
+= render 'layouts/hero_asset'
+.row
+  .section
+    .col-3-4
+      - @pages.each do |page|
+        = link_to page_path(page) do
+          .article
+            h1
+              = page.title
+            - if img = page.hero_image_name.presence
+              p = image_tag("heroes/#{img}", class: 'full')
+            p.article-body
+              = markdown(page.body || 'No content')
+            p.meta
+              = page.created_at.strftime("%b %d, %Y")
+              span.stick<> |
+              = page.author.name
+          hr
+    .col-1-4
+
+.row
+  .section
+    = will_paginate

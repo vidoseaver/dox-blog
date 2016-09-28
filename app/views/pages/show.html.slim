@@ -1,0 +1,32 @@
+- provide :body_class do
+  | article-view has-hero
+
+- @hero_asset = "heroes/#{@page.hero_image_name}"
+
+= render 'layouts/hero_asset'
+- content_for :hero do
+  .space
+
+- content_for :title do
+  = @page.title
+
+- content_for :hero_image do
+  - if img = @page.hero_image_name.presence
+    = asset_url("heroes/#{img}")
+
+.row
+  .section
+    .col-3-4
+      .article
+        h1
+          = @page.title
+        h2
+          = @page.subtitle
+        p
+          = markdown(@page.body || 'No content')
+        p.meta
+          = @page.created_at.strftime("%b %d, %Y")
+          span.stick<> |
+          = @page.author.try(:name)
+        = render 'layouts/social'
+    .col-1-4

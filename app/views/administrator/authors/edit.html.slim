@@ -1,0 +1,9 @@
+.row
+  .section
+    h1 Editing author
+    hr
+    == render 'form'
+    hr
+    = link_to 'Show', administrator_author_path(@author), class: 'btn'
+    =< link_to 'Back', administrator_authors_path, class: 'btn'
+

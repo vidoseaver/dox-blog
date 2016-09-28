@@ -1,0 +1,10 @@
+- @notice_class = "show"
+- @notice_class = "hide" if (yield(:notice).blank? && flash.empty?)
+
+- if (:notice)
+  .row.notice#notice class="#{@notice_class}"
+    .section.autogrid
+      .autocol
+        = notice
+      .autocol
+        i.ion-ios-close-outline.i2x.float-right onclick="document.getElementById('notice').className = 'hide'; return false;" title="Dismiss"

@@ -1,0 +1,32 @@
+- provide :body_class do
+  | articles-list articles
+
+= render "layouts/admin_menu"
+
+.row
+  .section
+
+    = link_to 'New Page', new_administrator_page_path, class: 'btn'
+    hr
+
+    .col-3-4
+      - @pages.each do |page|
+        .article
+          h1 = page.title
+          p.meta
+            > Author:
+            = page.author.name
+            span.stick<
+              > |
+            > Published:
+            = page.published
+          p
+            => link_to 'Preview', page_path(page), class: 'btn small'
+            => link_to 'Edit', edit_administrator_page_path(page), class: 'btn small'
+            => link_to 'Destroy', administrator_page_path(page), data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn small red'
+        hr
+    .col-1-4
+
+.row
+  .section
+    = will_paginate

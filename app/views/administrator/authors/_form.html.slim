@@ -1,0 +1,25 @@
+.big
+  = form_for @author, url: (@author.persisted?? administrator_author_path(@author) : administrator_authors_path) do |form|
+    - if @author.errors.any?
+      .error_explanation
+        p = "#{pluralize(@author.errors.count, "error")} prohibited this author from being saved:"
+        ul
+          - @author.errors.full_messages.each do |message|
+            li = message
+    p
+      = form.label :name
+      = form.text_field :name
+    p
+      = form.label :email
+      = form.text_field :email
+    p
+      = form.label :twitter, "Twitter (sans @)"
+      = form.text_field :twitter
+    p
+      = form.label :about
+      = form.text_area :about
+    p
+      = form.label :active do
+      = form.check_box :active
+    p
+      = form.submit
