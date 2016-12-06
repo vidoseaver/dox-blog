@@ -12,7 +12,7 @@ Run `bundle exec rspec`
 
 ## Assignment Instructions
 
-* **FORK** this repository, create a branch, complete all 3 stories and create a pull-request pointing at YOUR fork with your changes.
+* **FORK** this repository, create a branch, complete all 3 stories and create a pull-request pointing at ****YOUR**** fork with your changes.
 * Add @doximity-review as a contributor on your fork and tag this account on your PR description.
 * Code Style Guide can be found [here](https://github.com/bbatsov/ruby-style-guide), use 2 soft-tabs.
 
@@ -20,7 +20,7 @@ Run `bundle exec rspec`
 
 * Tests are highly encouraged.
 * Don't disregard performance optimizations, sure there's a small amount of articles today, but what if there were 500k?
-* We're not concerned with styling, `/components` does have some guidance if you must.
+* We're not concerned with CSS styling, `/components` does have some guidance if you must.
 * Avoid pushing indentation changes to current files, this makes the changeset harder to read.
 
 ## What to Expect after you Submit
@@ -33,11 +33,11 @@ Our team will be notified and we'll review the submission within 2 days. We'll r
 Story Title: As a reader I would like to search the blog so
 that I can find articles which interest me.
 
-Description: Provide a front-end UI where searches can be performed.
-Using MySQL `like` is perfectly fine. Results should be shown on
-the page without a full page reload. Use an AJAX request to add
-the search results to the page. Results should be paginated with
-5 articles per page. Pagination should also happen without a full
+Description: Leverage the current sidebar HTML under 'Search Articles'
+to provide in-place searching functionality. 
+Using MySQL `like` is perfectly fine. Use an AJAX request to add
+the search results to the page without a full page reload.
+Paginate to 5 results, paginating should also happen without a full
 page refresh. Search against article body and title.
 ```
 
@@ -49,7 +49,7 @@ I can get results with less typing.
 
 Description: Provide search suggestions when I type in the search
 input field. Selecting a search suggestion should perform a search
-using the suggested keywords. Search against article title.
+using the suggested keywords. Search against article title only.
 
 ```
 
@@ -65,7 +65,8 @@ Do not use a search engine library, you need to create your own algorithm.
 Incorporate this relevancy score in the sort order of the search results.
 Search against article body and title. An article that contains the same
 word twice would have a relevancy score that is higher than an article
-which only contains the searched word once.
+which only contains the searched word once. Title of the article should
+weigh relevancy more heavily. 
 
-Consider if your solution performant.
+Bonus points for performance considerations, caching and pre-calculating tokens.
 ```
