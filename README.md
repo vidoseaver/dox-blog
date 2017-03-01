@@ -16,7 +16,7 @@ Run `bundle exec rspec`
 ## Assignment Instructions
 
 * **FORK** this repository, create a branch, complete all 3 stories and create a pull-request pointing at ****YOUR**** fork with your changes.
-* Add @doximity-review as a contributor on your fork and tag this account on your PR description.
+* Once completed, email a link to your Pull Request to techops@doximity.com 
 * Code Style Guide can be found [here](https://github.com/bbatsov/ruby-style-guide), use 2 soft-tabs.
 
 ## A Few Considerations
