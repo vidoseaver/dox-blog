@@ -18,6 +18,7 @@ gem 'pygments.rb'
 gem 'faker'
 gem 'pry'
 gem 'figaro'
+gem 'faraday'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
