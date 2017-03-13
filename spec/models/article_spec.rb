@@ -47,7 +47,4 @@ feature "article model spec" do
       expect(articles.none? {|article| article.id == non_cancer_article.id}).to eq true
     end
   end
-  context "text" do
-
-  end
 end
