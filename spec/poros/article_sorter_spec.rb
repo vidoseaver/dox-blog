@@ -14,5 +14,11 @@ describe "Article_sorter" do
 
       expect(ArticleSorter.count_of_apprearences_in_title(article, "Blah")).to eq(3)
     end
+    it "is now dynamic and can can count appearance in body as well" do
+      author = create(:author)
+      article = author.articles.create!(title: "Blah blah BLAH Cancer surviror", featured: false, body: "Words WORDS words", published: true)
+
+      expect(ArticleSorter.count_of_apprearences_in_title(article, "body", "words")).to eq(3)
+    end
   end
 end
