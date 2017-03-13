@@ -7,10 +7,10 @@ class ArticleSorter
 
   def self.articles_with_scores(list_of_articles, word)
     list_of_articles.map do |article|
-      title_score = self.count_of_apprearences(article, "title", word) * 2
+      title_score = (self.count_of_apprearences(article, "title", word) * 2.1).round(2)
       body_score = self.count_of_apprearences(article, "body", word)
       [article, title_score + body_score]
     end
   end
-
+  
 end
