@@ -21,4 +21,12 @@ describe "Article_sorter" do
       expect(ArticleSorter.count_of_apprearences(article, "body", "words")).to eq(3)
     end
   end
+  context ".articles_with_scores" do
+    it "returns a 2D array with each object as an array with the article and then the score" do
+      author = create(:author)
+      article = author.articles.create!(title: "Blah blah BLAH Cancer surviror", featured: false, body: "Random words", published: true)
+
+      expect(ArticleSorter.articles_with_scores([article], "Blah")).to eq([[article, 6]])
+    end
+  end
 end
