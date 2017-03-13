@@ -32,20 +32,36 @@ describe "Article_sorter" do
       author = create(:author)
       article = author.articles.create!(title: "Blah Cancer surviror", featured: false, body: "Random words", published: true)
 
-      expect(ArticleSorter.articles_with_scores([article], "Blah")).to eq([[article, 2]])
+      expect(ArticleSorter.articles_with_scores([article], "Blah")).to eq([[article, 2.1]])
     end
     it "returns a 2D array with each object as an array with the article and then the score" do
       author = create(:author)
       article = author.articles.create!(title: "Blah blah BLAH Cancer surviror", featured: false, body: "Random words", published: true)
 
-      expect(ArticleSorter.articles_with_scores([article], "Blah")).to eq([[article, 6]])
+      expect(ArticleSorter.articles_with_scores([article], "Blah")).to eq([[article, 6.3]])
     end
     it "works with multiple articles" do
       author = create(:author)
       article_one = author.articles.create!(title: "Blah Cancer surviror", featured: false, body: "Random words", published: true)
       article_two = author.articles.create!(title: "Blah Cancer surviror", featured: false, body: "Blah words", published: true)
 
-      expect(ArticleSorter.articles_with_scores([article_one, article_two], "Blah")).to eq([[article_one, 2], [article_two, 3]])
+      expect(ArticleSorter.articles_with_scores([article_one, article_two], "Blah")).to eq([[article_one, 2.1], [article_two, 3.1]])
+    end
+  end
+  context ".sort_by_score_and_paginate(article_list, word)" do
+    it "will sort articles by score of a word and paginate them into groups of five by default" do
+      author = create(:author)
+      one = author.articles.create!(title: "Ipsum Lorem", featured: false, body: "1 Word count 1", published: true)
+      two = author.articles.create!(title: "Lorem Ipsum", featured: false, body: "2 Blah word word", published: true)
+      three = author.articles.create!(title: "Word Ipsum",  featured: false, body: "3 Blah word word", published: true)
+      four = author.articles.create!(title: "Remlo Word", featured: false, body: "2.1 Blah", published: true)
+      five = author.articles.create!(title: "Lorem Ipsum", featured: false, body: "4 word word word word word", published: true)
+      six = author.articles.create!(title: "Lorem Ipsum", featured: false, body: "Blah word", published: true)
+
+      article_list = [one, two, three, four, five, six]
+      expected = [[five, three, two, ]]
+
+      expect(ArticleSorter.sort_by_score_and_paginate(article_list, "word")).to eq([])
     end
   end
 end
