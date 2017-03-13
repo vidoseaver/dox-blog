@@ -40,5 +40,12 @@ describe "Article_sorter" do
 
       expect(ArticleSorter.articles_with_scores([article], "Blah")).to eq([[article, 6]])
     end
+    it "works with multiple articles" do
+      author = create(:author)
+      article_one = author.articles.create!(title: "Blah Cancer surviror", featured: false, body: "Random words", published: true)
+      article_two = author.articles.create!(title: "Blah Cancer surviror", featured: false, body: "Blah words", published: true)
+
+      expect(ArticleSorter.articles_with_scores([article_one, article_two], "Blah")).to eq([[article_one, 2], [article_two, 3]])
+    end
   end
 end
