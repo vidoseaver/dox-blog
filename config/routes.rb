@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   root 'articles#index'
 
   resources :pages, only: [:index, :show]
@@ -12,6 +14,12 @@ Rails.application.routes.draw do
 
   get 'components' => 'components#components', as: :components
   get 'admin' => 'administrator/articles#index', as: :admin
+
+  namespace :api do
+    namespace :v1 do
+      resources :articles_title_search, only: [:index]
+    end
+  end
 
   namespace :administrator do
     resources :authors
