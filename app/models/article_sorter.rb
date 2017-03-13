@@ -1,8 +1,8 @@
 class ArticleSorter
 
-  def self.count_of_apprearences_in_title(article, word)
-    title  = article.title.downcase
-    title.scan(/(?=#{word.downcase})/).count
+  def self.count_of_apprearences(article, section_to_search, word)
+    section  = article.send(section_to_search).downcase
+    section.scan(/(?=#{word.downcase})/).count
   end
 
 end
