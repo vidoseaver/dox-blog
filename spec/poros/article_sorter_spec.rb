@@ -22,6 +22,18 @@ describe "Article_sorter" do
     end
   end
   context ".articles_with_scores" do
+    it "an article with the word in the body scores one" do
+      author = create(:author)
+      article = author.articles.create!(title: "Blah Cancer surviror", featured: false, body: "Random words", published: true)
+
+      expect(ArticleSorter.articles_with_scores([article], "Random")).to eq([[article, 1]])
+    end
+    it "an article with the word in the title scores two" do
+      author = create(:author)
+      article = author.articles.create!(title: "Blah Cancer surviror", featured: false, body: "Random words", published: true)
+
+      expect(ArticleSorter.articles_with_scores([article], "Blah")).to eq([[article, 2]])
+    end
     it "returns a 2D array with each object as an array with the article and then the score" do
       author = create(:author)
       article = author.articles.create!(title: "Blah blah BLAH Cancer surviror", featured: false, body: "Random words", published: true)
