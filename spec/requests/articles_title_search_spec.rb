@@ -11,12 +11,17 @@ describe "Articles_title_search" do
 
       get "/api/v1/articles_title_search?search=Cancer"
 
-      articles = JSON.parse(response.body)
+      articles = JSON.parse(response.body, symbolize_names:true)
 
       expect(response).to be_success
-      expect(articles.count).to eq(3)
-      expect(articles.all? {|article| arcticle.title.include?(Cancer)}).to eq true
-      expect(artciles).to not_include(non_cancer_article )
+      expect(articles.first.count).to eq(3)
+      expect(articles.first.all? do |article|
+        true if article[:title].include?("Cancer") ||
+        article[:body].include?("cancer")
+      end).to eq true
+      expect(articles.first.none? do |article|
+        article[:id] == "#{non_cancer_article.id}"
+      end).to be true
     end
   end
 end
