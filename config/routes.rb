@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+
+
   root 'articles#index'
 
   resources :pages, only: [:index, :show]
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      resources :articles,               only: [:index]
       resources :articles_title_search, only: [:index]
     end
   end
