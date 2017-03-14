@@ -52,16 +52,16 @@ describe "Article_sorter" do
     it "will sort articles by score of a word and paginate them into groups of five by default" do
       author = create(:author)
       one = author.articles.create!(title: "Ipsum Lorem", featured: false, body: "1 Word count 1", published: true)
-      two = author.articles.create!(title: "Lorem Ipsum", featured: false, body: "2 Blah word word", published: true)
-      three = author.articles.create!(title: "Word Ipsum",  featured: false, body: "3 Blah word word", published: true)
-      four = author.articles.create!(title: "Remlo Word", featured: false, body: "2.1 Blah", published: true)
+      two = author.articles.create!(title: "Lorem Ipsum", featured: false, body: "2  word word", published: true)
+      three = author.articles.create!(title: "Word Ipsum",  featured: false, body: "3.1  word word", published: true)
+      four = author.articles.create!(title: "Remlo Word", featured: false, body: "2.1 ", published: true)
       five = author.articles.create!(title: "Lorem Ipsum", featured: false, body: "4 word word word word word", published: true)
-      six = author.articles.create!(title: "Lorem Ipsum", featured: false, body: "Blah word", published: true)
+      # six = author.articles.create!(title: "Lorem Ipsum", featured: false, body: "1 word", published: true)
 
-      article_list = [one, two, three, four, five, six]
-      expected = [[five, three, two, ]]
+      article_list = [one, two, three, four, five]
+      expected = [[five, three, four, two, one]]
 
-      expect(ArticleSorter.sort_by_score_and_paginate(article_list, "word")).to eq([])
+      expect(ArticleSorter.sort_by_score_and_paginate(article_list, "word")).to eq(expected)
     end
   end
 end
