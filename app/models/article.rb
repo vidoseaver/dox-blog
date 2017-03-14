@@ -7,4 +7,13 @@ class Article < ActiveRecord::Base
 
   scope :published, -> { where(published: true).order("created_at desc") }
   scope :featured, -> { where(published: true).where(featured: true).order("id desc") }
+
+  def self.where_title_or_body_includes(text)
+    where("title OR body LIKE ?", "%#{text}%")
+  end
+
+  def self.find_articles_by_keyword_and_paginate(keyword)
+    articles = self.where_title_or_body_includes(keyword)
+    sorted = ArticleSorter.sort_by_score_and_paginate(articles, keyword)
+  end
 end
