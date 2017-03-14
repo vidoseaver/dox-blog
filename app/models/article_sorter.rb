@@ -19,11 +19,11 @@ class ArticleSorter
     cleaned_articles = sorted_articles.flatten.delete_if{ |article| article.class == Fixnum || article.class == Float}
     paginated = self.paginate(cleaned_articles, pag_count)
   end
-  
+
   def self.paginate(list, size)
     chunked_list = Array.new
     until list.empty?
-      chunked_list << list.slice!(0..4)
+      chunked_list << list.to_a.slice!(0..4)
     end
     chunked_list
   end
