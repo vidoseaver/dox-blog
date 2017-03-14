@@ -47,4 +47,25 @@ feature "article model spec" do
       expect(articles.none? {|article| article.id == non_cancer_article.id}).to eq true
     end
   end
+  context ".find_articles_by_keyword_and_paginate(keyword)" do
+    it "makes multiple groups of five and can handle numbers non divisible by five " do
+      author = create(:author)
+      one = author.articles.create!(title: "Ipsum Lorem", featured: false, body: "1 Word count 1", published: true)
+      two = author.articles.create!(title: "Lorem Ipsum", featured: false, body: "2  word word", published: true)
+      three = author.articles.create!(title: "Word Ipsum",  featured: false, body: "3.1  word word", published: true)
+      four = author.articles.create!(title: "Remlo Word", featured: false, body: "2.1 word ", published: true)
+      five = author.articles.create!(title: "Lorem word", featured: false, body: "6.1 word word word word word", published: true)
+      six = author.articles.create!(title: "Lorem Ipsum", featured: false, body: " six 1 word", published: true)
+      seven = author.articles.create!(title: "Lorem Ipsum", featured: false, body: " seven 1 word", published: true)
+      eight = author.articles.create!(title: "Lorem Ipsum", featured: false, body: "eight 1 word", published: true)
+      nine = author.articles.create!(title: "Lorem Ipsum", featured: false, body: " nine 1 word", published: true)
+      ten = author.articles.create!(title: "Lorem Ipsum", featured: false, body: "none of that in here", published: true)
+
+
+      article_list = [one, two, three, four, five, six, seven, eight, nine]
+      expected = [[five, three, four, two, nine], [six, seven, eight, one]]
+
+      expect(Article.find_articles_by_keyword_and_paginate("word")).to eq(expected)
+    end
+  end
 end
