@@ -81,5 +81,14 @@ describe "Article_sorter" do
       expect(ArticleSorter.sort_by_score_and_paginate(article_list, "word")).to eq(expected)
     end
   end
-  
+  context ".paginate(list, size)" do
+    it "breaks an array of things into a 2d array each the length of the size" do
+      list = [1,2,3,4,5,6,7,8,9,10]
+      size  = 6
+
+      expected = [[1,2,3,4,5],[6,7,8,9,10]]
+
+      expect(ArticleSorter.paginate(list, size)).to eq(expected)
+    end
+  end
 end
