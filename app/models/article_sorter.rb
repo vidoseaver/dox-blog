@@ -12,5 +12,15 @@ class ArticleSorter
       [article, title_score + body_score]
     end
   end
-  
+
+  def self.sort_by_score_and_paginate(list, word, pag_count = 5)
+    scored_articles = self.articles_with_scores(list, word)
+    sorted_articles = scored_articles.sort_by{|article, score| score}.reverse
+    cleaned_articles = sorted_articles.flatten.delete_if{|article| article.class == Fixnum || article.class == Float}
+    paginated = Array.new
+    until cleaned_articles.empty?
+      paginated << cleaned_articles.slice!(0..4)
+    end
+    paginated
+  end
 end
