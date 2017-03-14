@@ -19,6 +19,7 @@ gem 'faker'
 gem 'pry'
 gem 'figaro'
 gem 'faraday'
+gem 'react-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
