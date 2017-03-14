@@ -17,12 +17,9 @@ class ArticleSorter
     scored_articles = self.articles_with_scores(list, word)
     sorted_articles = scored_articles.sort_by{ |article, score| score}.reverse
     cleaned_articles = sorted_articles.flatten.delete_if{ |article| article.class == Fixnum || article.class == Float}
-    paginated = Array.new
-    until cleaned_articles.empty?
-      paginated << cleaned_articles.slice!(0..4)
-    end
-    paginated
+    paginated = self.paginate(cleaned_articles, pag_count)
   end
+  
   def self.paginate(list, size)
     chunked_list = Array.new
     until list.empty?
