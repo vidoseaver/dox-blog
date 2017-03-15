@@ -282,6 +282,7 @@ DEPENDENCIES
   pygments.rb
   rails (= 4.2.4)
   rails_12factor
+  react-autocomplete-rails
   react-rails
   redcarpet
   rspec-benchmark

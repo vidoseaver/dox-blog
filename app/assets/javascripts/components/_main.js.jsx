@@ -18,12 +18,15 @@ var Main = React.createClass({
     this.setState({searchWord: searchWord, page:0})
   },
 
-
   cleanTitles() {
     cleaned = this.state.titles.map(function(article){
       return article.title;
     })
     this.setState({titles: cleaned})
+  },
+
+  updatePage(){
+
   },
 
   render() {
@@ -33,6 +36,13 @@ var Main = React.createClass({
 
     return (
       <div>
+        <div className='row'>
+          <div className='section'>
+            <div className='pagination'>
+              <Pagination titles={this.state.titles}
+            </div>
+          </div>
+        </div>
         <div className='row'>
           <div className='section'>
             <div className='col-3-4'>
