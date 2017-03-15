@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Articles_title_search" do
+describe "api/v1/articles_title_search" do
   context "#index" do
     it "returns all the articles  with a title 'like' the search" do
       author = create(:author)
