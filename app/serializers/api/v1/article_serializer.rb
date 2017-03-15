@@ -1,4 +1,4 @@
-class ArticleSerializer < ActiveModel::Serializer
+class Api::V1::ArticleSerializer < ActiveModel::Serializer
   attributes :id, :author, :time, :title, :body, :image_path, :slug
 
   def author
@@ -10,7 +10,7 @@ class ArticleSerializer < ActiveModel::Serializer
   end
 
   def image_path
-    path = ActionController::Base.helpers.asset_path("heroes/" + object.hero_image_name)
+    path = ActionController::Base.helpers.asset_path("heroes/" + object.hero_image_name) unless object.hero_image_name == nil
     path
   end
 end
