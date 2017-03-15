@@ -20,6 +20,7 @@ gem 'pry'
 gem 'figaro'
 gem 'faraday'
 gem 'react-rails'
+gem 'active_model_serializers', '~> 0.10.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'

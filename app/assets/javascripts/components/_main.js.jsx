@@ -1,4 +1,13 @@
 var Main = React.createClass({
+
+  getInitialState() {
+  return { articles: []}
+  },
+
+  componentDidMount() {
+    $.getJSON('/api/v1/articles.json', (response) => { this.setState({ articles: response, allArticles: response }) });
+  },
+
   render() {
     return (
       <div>
@@ -18,7 +27,7 @@ var Main = React.createClass({
               <h1>Pagination</h1>
             </div>
           </div>
-        </div>        
+        </div>
       </div>
     )
   }
