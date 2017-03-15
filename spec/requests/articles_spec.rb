@@ -14,7 +14,7 @@ describe "api/v1/articles" do
       articles = JSON.parse(response.body, symbolize_names:true)
 
       expect(response).to be_success
-      expect(articles.first.count).to eq 4
+      expect(articles.count).to eq 4
     end
   end
 end
