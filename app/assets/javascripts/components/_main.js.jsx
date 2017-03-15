@@ -2,20 +2,24 @@ var Main = React.createClass({
 
 
   getInitialState() {
-    return { pageArticles: [], titles: [], page: 0, searchWord: undefined, potentialWord: undefined, matches:[]  }
+    return { pageArticles: [], titles: [], page: 0, searchWord: undefined, potentialWord: undefined, matches:[], totalArticles = 0  }
   },
 
   componentDidMount() {
-    $.getJSON('/api/v1/articles?page=0', (response) => { this.setState({pageArticles: response}) });
     $.getJSON('/api/v1/article_titles', (response) => { this.setState({titles: response}) });
+    $.getJSON('/api/v1/articles?page=0', (response) => { this.setState({pageArticles: response}) });
   },
 
   searchAndSetPages() {
     var searchWord = $('#_title').val()
     $('#_title1').val('')
-
-    $.getJSON('/api/v1/articles_title_search?search=' + searchWord + '&page=0', (response) => { this.setState({pageArticles: response}) });
-    this.setState({searchWord: searchWord, page:0})
+    if (searchWord.length > 0) {
+      $.getJSON('/api/v1/articles_title_search?search=' + searchWord + '&page=0', (response) => { this.setState({pageArticles: response}) });
+      this.setState({searchWord: searchWord, page:0})
+    } else {
+      $.getJSON('/api/v1/articles?page=0', (response) => { this.setState({pageArticles: response}) });
+      this.setState({page:0})
+    }
   },
 
   cleanTitles() {
