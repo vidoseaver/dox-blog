@@ -2,7 +2,7 @@ var Main = React.createClass({
 
 
   getInitialState() {
-    return { pageArticles: [], titles: [], page: 0, searchWord: undefined, potentialWord: undefined  }
+    return { pageArticles: [], titles: [], page: 0, searchWord: undefined, potentialWord: undefined, matches:[]  }
   },
 
   componentDidMount() {
@@ -11,7 +11,7 @@ var Main = React.createClass({
   },
 
   searchAndSetPages() {
-    var searchWord = $('#_title1').val()
+    var searchWord = $('#_title').val()
     $('#_title1').val('')
 
     $.getJSON('/api/v1/articles_title_search?search=' + searchWord + '&page=0', (response) => { this.setState({pageArticles: response}) });
@@ -29,9 +29,22 @@ var Main = React.createClass({
 
   },
 
+  createDataList() {
+    var dataList = document.getElementById('matches-datalist')
+    this.state.titles.forEach((match) => {
+      var option = document.createElement('option')
+      option.value = match
+      dataList.appendChild(option)
+    })
+  },
+
+
   render() {
     if (this.state.titles.length > 0 && typeof this.state.titles[0] != 'string') {
       this.cleanTitles()
+    }
+    if (typeof this.state.titles[0] == 'string' ) {
+      this.createDataList()
     }
 
     return (
@@ -39,7 +52,6 @@ var Main = React.createClass({
         <div className='row'>
           <div className='section'>
             <div className='pagination'>
-              <Pagination titles={this.state.titles}
             </div>
           </div>
         </div>
@@ -51,10 +63,11 @@ var Main = React.createClass({
             <div className='col-1-4'>
               <div className='search'>
                 Search Articles
-                <p>
-                  <input type='text' name="[title]" id='_title1'/>
-                  <input type='submit' name = 'commit' value='Search' onClick={this.searchAndSetPages}/>
-                </p>
+                <form>
+                  <input type='text' name='[title]' id='_title' list="matches-datalist"/>
+                      <datalist id='matches-datalist'></datalist>
+                  <input type='submit' name='commit' value='Search' onClick={this.searchAndSetPages}/>
+                </form>
               </div>
             </div>
           </div>
