@@ -18,13 +18,19 @@ var Main = React.createClass({
     this.setState({searchWord: searchWord, page:0})
   },
 
-  // filterAndSetPotentialWord(){
-  //
-  // }
 
-
+  cleanTitles() {
+    cleaned = this.state.titles.map(function(article){
+      return article.title;
+    })
+    this.setState({titles: cleaned})
+  },
 
   render() {
+    if (this.state.titles.length > 0 && typeof this.state.titles[0] != 'string') {
+      this.cleanTitles()
+    }
+
     return (
       <div>
         <div className='row'>
@@ -36,7 +42,7 @@ var Main = React.createClass({
               <div className='search'>
                 Search Articles
                 <p>
-                  <input type='text' name="[title]" id='_title1' value={this.state.potentialWord} onChange={filterAndSetPotentialWord}/>
+                  <input type='text' name="[title]" id='_title1'/>
                   <input type='submit' name = 'commit' value='Search' onClick={this.searchAndSetPages}/>
                 </p>
               </div>
