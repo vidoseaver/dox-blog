@@ -6,7 +6,7 @@ var Main = React.createClass({
   },
 
   componentDidMount() {
-    $.getJSON('/api/v1/articles.json', (response) => { this.setState({  pageArticles: response.slice(0,5), allArticles: response  }) });
+    $.getJSON('/api/v1/articles?page=0', (response) => { this.setState({pageArticles: response}) });
   },
 
 
@@ -16,7 +16,6 @@ var Main = React.createClass({
         <div className='row'>
           <div className='section'>
             <div className='col-3-4'>
-              <h1>Articles</h1>
               <PageArticles articles={this.state.pageArticles} />
             </div>
             <div className='col-1-4'>
