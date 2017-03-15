@@ -15,23 +15,8 @@
       > By:
       = @featured_article.author.name
 
-= render 'layouts/hero_asset'
-.row
-  .section
-    .col-1-4
-      .search
-        | Search Articles
-        = form_for "", url: '#' do |form|
-          p
-            = form.text_field :title
-            = form.submit :search
-
-          div.load.hide
-
-          .results.box.hide
-            | No Results
-
-= react_component 'Main'
 .row
   .section
     = will_paginate
+.row
+  = react_component 'Main'
