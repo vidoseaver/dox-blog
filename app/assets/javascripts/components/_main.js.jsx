@@ -2,7 +2,7 @@ var Main = React.createClass({
 
 
   getInitialState() {
-    return { pageArticles: [], titles: [], currentPage: 0, searchWord: undefined, potentialWord: undefined, matches:[], pageCount: 0  }
+    return { pageArticles: [], titles: [], currentPage: 0, searchWord: undefined, potentialWord: undefined, matches:[], pageCount: 0,  matcheSet: false}
   },
 
   componentDidMount() {
@@ -45,22 +45,36 @@ var Main = React.createClass({
   },
 
   createDataList() {
-    var dataList = document.getElementById('matches-datalist')
-    this.state.titles.forEach(function(match) {
-      var option = document.createElement('option');
-      option.value = match;
-      dataList.appendChild(option);
-    })
+    var searchWord = $('#_title').val();
+    if (searchWord.length >= 4 && this.state.matcheSet ==  false) {
+      var dataList = document.getElementById('matches-datalist')
+      var filtered = this.state.titles.filter(function(title) {
+        return title.includes(searchWord)
+      })
+      filtered.forEach(function(match) {
+        var option = document.createElement('option');
+        option.value = match;
+        dataList.appendChild(option);
+      })
+      this.setState({matcheSet: true})
+    } else  if ( searchWord.length <= 4 && this.state.matcheSet){
+      this.clearDataList()
+      this.setState({matcheSet:false})
+    }
   },
 
+  clearDataList() {
+   var dataList = document.getElementById('matches-datalist')
+   while (dataList.firstChild) {
+     dataList.removeChild(dataList.firstChild)
+   }
+ },
 
   render() {
     if (this.state.titles.length > 0 && typeof this.state.titles[0] != 'string') {
       this.cleanTitles();
     }
-    if (typeof this.state.titles[0] == 'string' ) {
-      this.createDataList();
-    }
+
 
     return (
       <div>
@@ -73,7 +87,8 @@ var Main = React.createClass({
               <div className='search'>
                 Search Articles
                 <form>
-                  <input type='text' name='[title]' id='_title' list="matches-datalist"/>
+                  <input type='text' name='[title]' id='_title' list="matches-datalist"
+                    onChange={this.createDataList}/>
                   <datalist id='matches-datalist'></datalist>
                   <input type='submit' name='commit' value='Search' onClick={this.searchAndSetPages}/>
                 </form>
@@ -87,7 +102,7 @@ var Main = React.createClass({
               <Pagination currentPage={this.state.currentPage} pageCount={this.state.pageCount} updatePage={this.updatePage} changePageByOne={this.changePageByOne}/>
             </div>
           </div>
-        </div>        
+        </div>
       </div>
     )
   }
