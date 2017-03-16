@@ -20,6 +20,11 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_model_serializers (0.10.5)
+      actionpack (>= 4.1, < 6)
+      activemodel (>= 4.1, < 6)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.2)
     activejob (4.2.4)
       activesupport (= 4.2.4)
       globalid (>= 0.3.0)
@@ -38,6 +43,10 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     arel (6.0.3)
+    babel-source (5.8.35)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
     benchmark-perf (0.1.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -49,6 +58,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    case_transform (0.2)
+      activesupport
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
     codeclimate-test-reporter (0.4.8)
@@ -61,6 +72,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
+    connection_pool (2.2.1)
     database_cleaner (1.4.1)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
@@ -99,6 +111,7 @@ GEM
       jquery-ui-rails (= 4.0.3)
       railties (>= 3.1.0)
     json (1.8.3)
+    jsonapi-renderer (0.1.2)
     kgio (2.9.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -156,6 +169,13 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.15.0)
     rake (10.4.2)
+    react-rails (1.10.0)
+      babel-transpiler (>= 0.7.0)
+      coffee-script-source (~> 1.8)
+      connection_pool
+      execjs
+      railties (>= 3.2)
+      tilt
     redcarpet (3.3.2)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
@@ -243,6 +263,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers (~> 0.10.0)
   capybara
   codeclimate-test-reporter
   coffee-rails (~> 4.1.0)
@@ -261,6 +282,7 @@ DEPENDENCIES
   pygments.rb
   rails (= 4.2.4)
   rails_12factor
+  react-rails
   redcarpet
   rspec-benchmark
   rspec-rails (~> 3.5)

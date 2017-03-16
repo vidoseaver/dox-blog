@@ -17,6 +17,9 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      resources :articles,              only: [:index]
+      resources :articles_count,        only: [:index]
+      resources :article_titles,        only: [:index]
       resources :articles_title_search, only: [:index]
     end
   end
