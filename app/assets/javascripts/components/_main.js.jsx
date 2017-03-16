@@ -66,13 +66,6 @@ var Main = React.createClass({
       <div>
         <div className='row'>
           <div className='section'>
-            <div className='pagination'>
-              <Pagination currentPage={this.state.currentPage} pageCount={this.state.pageCount} updatePage={this.updatePage} changePageByOne={this.changePageByOne}/>
-            </div>
-          </div>
-        </div>
-        <div className='row'>
-          <div className='section'>
             <div className='col-3-4'>
               <PageArticles articles={this.state.pageArticles} />
             </div>
@@ -81,7 +74,7 @@ var Main = React.createClass({
                 Search Articles
                 <form>
                   <input type='text' name='[title]' id='_title' list="matches-datalist"/>
-                      <datalist id='matches-datalist'></datalist>
+                  <datalist id='matches-datalist'></datalist>
                   <input type='submit' name='commit' value='Search' onClick={this.searchAndSetPages}/>
                 </form>
               </div>
@@ -91,10 +84,10 @@ var Main = React.createClass({
         <div className='row'>
           <div className='section'>
             <div className='pagination'>
-              <h1>Pagination</h1>
+              <Pagination currentPage={this.state.currentPage} pageCount={this.state.pageCount} updatePage={this.updatePage} changePageByOne={this.changePageByOne}/>
             </div>
           </div>
-        </div>
+        </div>        
       </div>
     )
   }
