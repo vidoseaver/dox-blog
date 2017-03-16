@@ -9,7 +9,7 @@ class Article < ActiveRecord::Base
   scope :featured, -> { where(published: true).where(featured: true).order("id desc") }
 
   def self.where_title_or_body_includes(text)
-    where("title OR body LIKE ?", "%#{text}%")
+    where("title  LIKE ? OR body LIKE ?", "%#{text}%", "%#{text}%")
   end
 
   def self.find_articles_by_keyword_and_paginate(keyword)
