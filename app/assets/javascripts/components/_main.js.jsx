@@ -2,12 +2,13 @@ var Main = React.createClass({
 
 
   getInitialState() {
-    return { pageArticles: [], titles: [], page: 0, searchWord: undefined, potentialWord: undefined, matches:[], totalArticles = 0  }
+    return { pageArticles: [], titles: [], currentPage: 0, searchWord: undefined, potentialWord: undefined, matches:[], pageCount: 0  }
   },
 
   componentDidMount() {
     $.getJSON('/api/v1/article_titles', (response) => { this.setState({titles: response}) });
     $.getJSON('/api/v1/articles?page=0', (response) => { this.setState({pageArticles: response}) });
+    $.getJSON('/api/v1/articles_count', (response) => { this.setState({pageCount: parseInt(response)}) });
   },
 
   searchAndSetPages() {
@@ -15,10 +16,12 @@ var Main = React.createClass({
     $('#_title1').val('')
     if (searchWord.length > 0) {
       $.getJSON('/api/v1/articles_title_search?search=' + searchWord + '&page=0', (response) => { this.setState({pageArticles: response}) });
-      this.setState({searchWord: searchWord, page:0})
+      $.getJSON('/api/v1/articles_count?search=' + searchWord, (response) => { this.setState({pageCount: parseInt(response)}) });
+      this.setState({searchWord: searchWord, currentPage:0})
     } else {
       $.getJSON('/api/v1/articles?page=0', (response) => { this.setState({pageArticles: response}) });
-      this.setState({page:0})
+      $.getJSON('/api/v1/articles_count', (response) => { this.setState({pageCount: parseInt(response)}) });
+      this.setState({currentPage:0})
     }
   },
 
@@ -56,6 +59,7 @@ var Main = React.createClass({
         <div className='row'>
           <div className='section'>
             <div className='pagination'>
+              <Pagination currentPage={this.state.currentPage} pageCount={this.state.pageCount} updatePage={this.updatePage}/>
             </div>
           </div>
         </div>
