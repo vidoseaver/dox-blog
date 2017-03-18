@@ -1,8 +1,7 @@
 var Pagination = React.createClass({
 
-  handleClick(event){
-    var page = parseInt(event.target.innerHTML)
-    this.props.updatePage(event.target.innerHTML);
+  handleClick(pageNumber){
+    this.props.updatePage(pageNumber);
   },
   changePageByOne(event){
     var amount =  event.target.innerHTML === "Next →" ? 1 : - 1
@@ -12,12 +11,11 @@ var Pagination = React.createClass({
     var dots = []
     for (var i = 1; i < 10; i++) {
       if (this.props.currentPage == 0 && this.props.currentPage == i - 1) {
-        var dot = <a className="current" key={i}>{i}</a>
-        dots.push(dot)
+        var dot = <PageDot className="current" pageNumber={i}/>
       } else {
-        var dot = <a onClick={this.handleClick} key={i}>{i}</a>
-        dots.push(dot)
+        var dot = <PageDot handleClick={this.handleClick} pageNumber={i}/>
       }
+      dots.push(dot)
     }
     dots.push(<span className="gap">...</span>)
     dots.push(<a onClick={this.handleClick}>{this.props.pageCount -1}</a>)
@@ -26,13 +24,13 @@ var Pagination = React.createClass({
   },
 
   renderDotsUnderEight() {
-    var dots = []
+    var dots = [];
     for (var i = 1; i < 10; i++) {
       if (this.props.currentPage == i) {
-        var dot = <a className="current" key={i}>{i}</a>
+        var dot = <PageDot className="current" pageNumber={i}/>
         dots.push(dot)
       } else {
-        var dot = <a onClick={this.handleClick} key={i}>{i}</a>
+        var dot = <PageDot handleClick={this.handleClick} pageNumber={i}/>
         dots.push(dot)
       }
     }
@@ -45,10 +43,10 @@ var Pagination = React.createClass({
     var dots = []
     for (var i = 1; i < 10; i++) {
       if (this.props.currentPage == i) {
-        var dot = <a className="current" key={i}>{i}</a>
+        var dot = <PageDot className="current" pageNumber={i}/>
         dots.push(dot)
       } else {
-        var dot = <a onClick={this.handleClick} key={i}>{i}</a>
+        var dot = <PageDot handleClick={this.handleClick} pageNumber={i}/>
         dots.push(dot)
       }
     }
@@ -66,10 +64,10 @@ var Pagination = React.createClass({
     dots.push(<span className="gap">...</span>)
     for (var i = (currentPage - 4); i < (currentPage + 5); i++) {
       if (this.props.currentPage == i) {
-        var dot = <a className="current" key={i}>{i}</a>
+        var dot = <PageDot className="current" pageNumber={i}/>
         dots.push(dot)
       } else {
-        var dot = <a onClick={this.handleClick} key={i}>{i}</a>
+        var dot = <PageDot handleClick={this.handleClick} pageNumber={i}/>
         dots.push(dot)
       }
     }
@@ -88,10 +86,10 @@ var Pagination = React.createClass({
     dots.push(<span className="gap">...</span>)
     for (var i = pageCount - 8; i <= pageCount; i++) {
       if (currentPage == i) {
-        var dot = <a className="current" key={i}>{i}</a>
+        var dot = <PageDot className="current" pageNumber={i}/>
         dots.push(dot)
       } else {
-        var dot = <a onClick={this.handleClick} key={i}>{i}</a>
+        var dot = <PageDot handleClick={this.handleClick} pageNumber={i}/>
         dots.push(dot)
       }
     }
