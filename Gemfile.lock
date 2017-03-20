@@ -113,6 +113,8 @@ GEM
     json (1.8.3)
     jsonapi-renderer (0.1.2)
     kgio (2.9.3)
+    lodash-rails (4.17.4)
+      railties (>= 3.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -276,6 +278,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-sass-rails
+  lodash-rails
   mysql2 (~> 0.3.18)
   pg
   pry
