@@ -1,0 +1,1885 @@
+@charset "UTF-8";
+/* line 1, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 6, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+body {
+  margin: 0;
+}
+
+/* line 9, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 12, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 16, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 20, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+[hidden], template {
+  display: none;
+}
+
+/* line 23, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+a {
+  background-color: transparent;
+}
+/* line 25, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+a:active, a:hover {
+  outline: 0;
+}
+
+/* line 28, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 31, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+dfn {
+  font-style: italic;
+}
+
+/* line 34, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 38, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+small {
+  font-size: 80%;
+}
+
+/* line 41, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 47, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+/* line 54, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 57, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+img {
+  border: 0;
+}
+
+/* line 60, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 63, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 66, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+pre {
+  overflow: auto;
+}
+
+/* line 69, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 73, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* line 78, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+button {
+  overflow: visible;
+  text-transform: none;
+}
+
+/* line 82, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+select {
+  text-transform: none;
+}
+
+/* line 85, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+button, html input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 90, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 94, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+/* line 97, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 101, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+input {
+  line-height: normal;
+}
+/* line 102, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/* line 106, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+/* line 110, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/* line 112, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+/* line 114, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 117, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 122, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 126, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+textarea {
+  overflow: auto;
+}
+
+/* line 129, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 132, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 136, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_normalize.sass */
+td, th {
+  padding: 0;
+}
+
+/* line 3, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* line 8, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+html, body {
+  height: 100%;
+}
+
+/* line 11, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+body {
+  color: #444;
+  font: 16px/1.7 "Helvetica Neue", Helvetica, Sans-Serif;
+  font-weight: 300;
+  background: #EEEEEE;
+}
+
+/* line 17, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+.row {
+  display: table;
+  clear: both;
+  content: "";
+  width: 100%;
+}
+
+/* line 23, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+.section {
+  padding: 1em;
+  margin: 0 auto;
+}
+
+/* line 29, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 1em 0;
+}
+
+/* line 32, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* line 36, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+strong, b {
+  font-weight: 500;
+}
+
+/* line 39, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+a {
+  color: #FF634D;
+  text-decoration: none;
+}
+/* line 42, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+a:hover {
+  color: #DC5442;
+  transition: color 0.3s ease-in-out;
+}
+/* line 45, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+a:focus {
+  outline: none;
+}
+
+/* line 48, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+hr {
+  border: none;
+  background: #eee;
+  clear: both;
+  margin: 1.5em auto;
+  height: 1px;
+}
+/* line 54, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+hr.half {
+  width: 50%;
+}
+/* line 56, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+hr.quarter {
+  width: 25%;
+}
+
+/* line 59, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+pre {
+  white-space: pre-wrap;
+}
+
+@media screen and (min-width: 1440px) {
+  /* line 64, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+  .section {
+    max-width: 1366px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  /* line 69, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+  .section {
+    max-width: 1166px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  /* line 74, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+  .section {
+    max-width: 1024px;
+  }
+}
+@media screen and (max-width: 860px) {
+  /* line 79, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_base.sass */
+  .section {
+    max-width: 100%;
+  }
+}
+/* line 4, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn, a.btn, button, input[type='submit'] {
+  display: inline-block;
+  border-radius: 4px;
+  box-shadow: none;
+  cursor: pointer;
+  font-weight: 300;
+  outline: none;
+  margin: 0;
+  padding: 0.6em 1.5em;
+  line-height: 1;
+  text-align: center;
+  height: auto;
+  white-space: nowrap;
+  text-decoration: none;
+  appearance: none;
+  background: transparent;
+  color: #666666;
+  border: 1px solid #666666;
+}
+/* line 22, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn:hover, a.btn:hover, button:hover, input[type='submit']:hover {
+  filter: brightness(1);
+  -webkit-filter: brightness(1);
+  -moz-filter: brightness(1);
+}
+/* line 26, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn:hover, .btn.solid, a.btn:hover, a.btn.solid, button:hover, button.solid, input[type='submit']:hover, input[type='submit'].solid {
+  color: #FFFFFF;
+  background: #666666;
+}
+/* line 31, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.white, a.btn.white, button.white, input[type='submit'].white {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+/* line 34, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.white.solid, .btn.white:hover, a.btn.white.solid, a.btn.white:hover, button.white.solid, button.white:hover, input[type='submit'].white.solid, input[type='submit'].white:hover {
+  color: #000000;
+  background: #FFFFFF;
+}
+/* line 37, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.gray-light, a.btn.gray-light, button.gray-light, input[type='submit'].gray-light {
+  color: #AAAAAA;
+  border-color: #AAAAAA;
+}
+/* line 40, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.gray-light.solid, .btn.gray-light:hover, a.btn.gray-light.solid, a.btn.gray-light:hover, button.gray-light.solid, button.gray-light:hover, input[type='submit'].gray-light.solid, input[type='submit'].gray-light:hover {
+  color: #FFFFFF;
+  background: #AAAAAA;
+}
+/* line 43, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.gray-dark, a.btn.gray-dark, button.gray-dark, input[type='submit'].gray-dark {
+  color: #333333;
+  border-color: #333333;
+}
+/* line 46, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.gray-dark.solid, .btn.gray-dark:hover, a.btn.gray-dark.solid, a.btn.gray-dark:hover, button.gray-dark.solid, button.gray-dark:hover, input[type='submit'].gray-dark.solid, input[type='submit'].gray-dark:hover {
+  color: #FFFFFF;
+  background: #333333;
+}
+/* line 49, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.black, a.btn.black, button.black, input[type='submit'].black {
+  color: #000000;
+  border-color: #000000;
+}
+/* line 52, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.black.solid, .btn.black:hover, a.btn.black.solid, a.btn.black:hover, button.black.solid, button.black:hover, input[type='submit'].black.solid, input[type='submit'].black:hover {
+  color: #FFFFFF;
+  background: #000000;
+}
+/* line 55, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.red, a.btn.red, button.red, input[type='submit'].red {
+  color: #D4252A;
+  border-color: #D4252A;
+}
+/* line 58, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.red.solid, .btn.red:hover, a.btn.red.solid, a.btn.red:hover, button.red.solid, button.red:hover, input[type='submit'].red.solid, input[type='submit'].red:hover {
+  color: #FFFFFF;
+  background: #D4252A;
+}
+/* line 61, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.orange, a.btn.orange, button.orange, input[type='submit'].orange {
+  color: #E18C04;
+  border-color: #E18C04;
+}
+/* line 64, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.orange.solid, .btn.orange:hover, a.btn.orange.solid, a.btn.orange:hover, button.orange.solid, button.orange:hover, input[type='submit'].orange.solid, input[type='submit'].orange:hover {
+  color: #FFFFFF;
+  background: #E18C04;
+}
+/* line 67, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.blue, a.btn.blue, button.blue, input[type='submit'].blue {
+  color: #5A9FC8;
+  border-color: #5A9FC8;
+}
+/* line 70, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.blue.solid, .btn.blue:hover, a.btn.blue.solid, a.btn.blue:hover, button.blue.solid, button.blue:hover, input[type='submit'].blue.solid, input[type='submit'].blue:hover {
+  color: #FFFFFF;
+  background: #5A9FC8;
+}
+/* line 73, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.green, a.btn.green, button.green, input[type='submit'].green {
+  color: #6BAF56;
+  border-color: #6BAF56;
+}
+/* line 76, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.green.solid, .btn.green:hover, a.btn.green.solid, a.btn.green:hover, button.green.solid, button.green:hover, input[type='submit'].green.solid, input[type='submit'].green:hover {
+  color: #FFFFFF;
+  background: #6BAF56;
+}
+/* line 79, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.yellow, a.btn.yellow, button.yellow, input[type='submit'].yellow {
+  color: #D5B778;
+  border-color: #D5B778;
+}
+/* line 82, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.yellow.solid, .btn.yellow:hover, a.btn.yellow.solid, a.btn.yellow:hover, button.yellow.solid, button.yellow:hover, input[type='submit'].yellow.solid, input[type='submit'].yellow:hover {
+  color: #FFFFFF;
+  background: #D5B778;
+}
+/* line 88, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.solid:hover, a.btn.solid:hover, button.solid:hover, input[type='submit'].solid:hover {
+  filter: brightness(0.8);
+  -webkit-filter: brightness(0.8);
+  -moz-filter: brightness(0.8);
+}
+/* line 94, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.no-outline, a.btn.no-outline, button.no-outline, input[type='submit'].no-outline {
+  border-color: transparent;
+}
+/* line 98, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.large, a.btn.large, button.large, input[type='submit'].large {
+  font-size: 1.2em;
+  padding: 0.8em 1.7em;
+  word-wrap: normal;
+}
+/* line 102, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.small, a.btn.small, button.small, input[type='submit'].small {
+  padding: 0.4em 0.9em;
+  font-size: 0.8em;
+}
+/* line 107, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn.round, a.btn.round, button.round, input[type='submit'].round {
+  border-radius: 100em;
+}
+/* line 111, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn:hover, a.btn:hover, button:hover, input[type='submit']:hover {
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+}
+/* line 116, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn:active, .btn:focus, a.btn:active, a.btn:focus, button:active, button:focus, input[type='submit']:active, input[type='submit']:focus {
+  filter: brightness(0.7);
+  -webkit-filter: brightness(0.7);
+  -moz-filter: brightness(0.7);
+}
+/* line 121, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_buttons.sass */
+.btn:disabled, .btn.disabled, .btn:disabled:hover, .btn.disabled:hover, a.btn:disabled, a.btn.disabled, a.btn:disabled:hover, a.btn.disabled:hover, button:disabled, button.disabled, button:disabled:hover, button.disabled:hover, input[type='submit']:disabled, input[type='submit'].disabled, input[type='submit']:disabled:hover, input[type='submit'].disabled:hover {
+  cursor: default;
+  background: transparent;
+  color: #666666;
+  opacity: 0.2;
+  -webkit-opacity: 0.2;
+  -moz-opacity: 0.2;
+}
+
+/* line 2, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_grid.sass */
+body:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 7, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_grid.sass */
+[class*='col-'] {
+  float: left;
+  padding: 0.25%;
+  content: "";
+}
+
+/* line 12, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_grid.sass */
+.col-1-3 {
+  width: 33.33%;
+}
+
+/* line 14, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_grid.sass */
+.col-2-3 {
+  width: 66.66%;
+}
+
+/* line 16, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_grid.sass */
+.col-1-2 {
+  width: 50%;
+}
+
+/* line 18, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_grid.sass */
+.col-1-4 {
+  width: 25%;
+}
+
+/* line 20, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_grid.sass */
+.col-3-4 {
+  width: 75%;
+}
+
+/* line 22, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_grid.sass */
+.col-1-5 {
+  width: 20%;
+}
+
+/* line 24, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_grid.sass */
+.col-1-8 {
+  width: 12.5%;
+}
+
+/* line 27, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_grid.sass */
+.autogrid {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 31, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_grid.sass */
+.autocol {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 36, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_grid.sass */
+.right-only [class*='col-'], .right-only .autocol {
+  padding: 0 1em 0 0;
+}
+
+@media screen and (max-width: 667px) {
+  /* line 41, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_grid.sass */
+  [class*='col-'], .autocol {
+    width: 100%;
+  }
+
+  /* line 44, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_grid.sass */
+  .autocol {
+    display: block;
+  }
+}
+/* line 1, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_loaders.sass */
+.load {
+  height: 2em;
+  width: 2em;
+  border-radius: 100em;
+  display: inline-block;
+  border: 3px solid #ddd;
+  border-left-color: #666;
+  -webkit-animation-name: loading;
+  animation-name: loading;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 19, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_loaders.sass */
+.load.smallest {
+  width: 0.5em;
+  height: 0.5em;
+  border-width: 1px;
+}
+/* line 23, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_loaders.sass */
+.load.small {
+  width: 1em;
+  height: 1em;
+  border-width: 2px;
+}
+/* line 27, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_loaders.sass */
+.load.large {
+  width: 3em;
+  height: 3em;
+  border-width: 4px;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-ms-keyframes loading {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes loading {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+/* line 4, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs {
+  border-bottom: 1px solid #AAAAAA;
+}
+/* line 6, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 10, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 14, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs li {
+  float: left;
+  margin-right: 1px;
+}
+/* line 17, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs a, .tabs span {
+  display: block;
+  line-height: 1;
+  padding: 1em 2em;
+  border: 1px solid transparent;
+}
+/* line 22, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs a {
+  color: #666666;
+  text-decoration: none;
+}
+/* line 25, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs a:focus, .tabs a:hover {
+  background-color: #F9F9F9;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+/* line 30, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs li.here a, .tabs span {
+  color: #666666;
+  background: transparent;
+  position: relative;
+  border: 1px solid #AAAAAA;
+  border-bottom: 1px solid white;
+  bottom: -1px;
+  cursor: default;
+  text-decoration: none;
+}
+/* line 41, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs.round {
+  margin: 1em 0;
+  border-bottom: none;
+  width: 100%;
+}
+/* line 45, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs.round ul {
+  display: inline-block;
+}
+/* line 48, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs.round li a {
+  border-radius: 10em;
+  margin: 0 1em 0 0;
+  color: #666666;
+}
+/* line 52, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs.round li a:focus {
+  background: none;
+  color: #666666;
+}
+/* line 56, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs.round li.here a {
+  bottom: 0;
+  background: transparent;
+  border: 1px solid #AAAAAA;
+}
+/* line 61, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs.round li.here:hover a {
+  color: #666666;
+  background: transparent;
+}
+/* line 64, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs.round li.here:hover a:focus {
+  color: white;
+}
+/* line 67, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs.round li:hover a {
+  background: #AAAAAA;
+  color: #fff;
+}
+/* line 73, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs.center ul {
+  text-align: center;
+}
+/* line 75, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+.tabs.center li {
+  float: none;
+  display: inline-block;
+}
+
+@media screen and (max-width: 667px) {
+  /* line 82, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+  .tabs {
+    border-bottom: none;
+  }
+  /* line 84, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+  .tabs li {
+    width: 100%;
+  }
+  /* line 86, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+  .tabs li a {
+    padding: 1em;
+  }
+  /* line 89, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+  .tabs li.here a {
+    border-bottom-color: #AAAAAA;
+  }
+  /* line 94, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+  .tabs.round ul {
+    display: block;
+  }
+  /* line 96, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+  .tabs.round li {
+    width: 100%;
+    float: left;
+    display: block;
+    clear: none;
+    margin: 0;
+    padding: 0 0.5em;
+    margin: 0.1em 0;
+  }
+  /* line 104, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+  .tabs.round li a {
+    padding: 0.9em 1.1em;
+    margin: 0;
+    border-color: transparent;
+  }
+  /* line 108, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tabs.sass */
+  .tabs.round li a:hover {
+    border-color: #AAAAAA;
+  }
+}
+/* line 4, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_forms.sass */
+form * {
+  width: 100%;
+  margin: 1% 0;
+}
+
+/* line 8, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_forms.sass */
+input, select, textarea, select {
+  font-family: "Helvetica Neue", Helvetica, Sans-Serif;
+  font-size: 1em;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 0.5em;
+}
+/* line 15, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_forms.sass */
+input:hover, input:focus, select:hover, select:focus, textarea:hover, textarea:focus, select:hover, select:focus {
+  border-color: #aaa;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 20, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_forms.sass */
+input[type='date'], input[type='datetime-local'], input[type='time'], input[type='week'], input[type='month'] {
+  padding: 0.31em 0.5em;
+}
+/* line 26, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_forms.sass */
+input[type='range'] {
+  margin: 0.5em 0;
+  width: 100%;
+  height: 1em;
+  background: #FFFFFF;
+  border-radius: 1em;
+  appearance: none;
+  -webkit-appearance: none;
+}
+/* line 34, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_forms.sass */
+input[type='checkbox'], input[type='radio'] {
+  margin: 0 0.3em;
+  width: auto;
+}
+
+/* line 38, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_forms.sass */
+select {
+  height: 2.3em;
+  background: #FFFFFF;
+}
+
+/* line 43, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_forms.sass */
+.checkbox, .radio {
+  line-height: 2.2;
+}
+
+/* line 48, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_forms.sass */
+.big input, .big select, .big textarea, .big select {
+  padding: 0.7em 0.5em;
+  font-size: 1.2em;
+}
+/* line 51, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_forms.sass */
+.big select {
+  height: 2.7em;
+}
+
+/* line 4, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.header, .footer {
+  background: #FF634D;
+  z-index: 1;
+}
+/* line 8, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.header .logo img, .footer .logo img {
+  height: 2em;
+}
+
+/* line 12, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.header {
+  color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #FFFFFF;
+  opacity: 1;
+  vertical-align: middle;
+  transition: top 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  -webkit-transition: top 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+/* line 24, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.header .autocol {
+  vertical-align: middle;
+}
+/* line 26, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.header .section {
+  padding: 0;
+  height: 5em;
+}
+/* line 29, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.header.nav-up {
+  top: -10%;
+  opacity: 0;
+}
+/* line 32, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.header.nav-down {
+  animation: notification 0.5s ease;
+}
+/* line 34, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.header a {
+  color: #FFFFFF;
+  padding: 0 1em;
+  margin: 0 -1em;
+  height: 5em;
+  display: table-cell;
+  width: auto;
+  padding: 0.9em 1em;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+}
+/* line 45, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.header a:hover, .header a.here {
+  background: #eb4e32;
+}
+/* line 48, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.header a:hover i {
+  opacity: 1;
+}
+/* line 50, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.header a .ion-log-in {
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes notification {
+  0% {
+    opacity: 0;
+    top: -10%;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+/* line 63, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.contents {
+  padding: 5em 0;
+  min-height: 42em;
+  background: #FFFFFF;
+}
+
+/* line 69, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.footer {
+  color: #AAAAAA;
+  padding: 5em 1em;
+  background: #EEEEEE;
+}
+/* line 73, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.footer hr {
+  background: rgba(0, 0, 0, 0.1);
+}
+/* line 75, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 79, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.footer li {
+  display: inline;
+  padding: 0 0.5em;
+}
+/* line 82, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.footer a {
+  color: #666666;
+}
+/* line 84, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.footer a:hover {
+  color: #DC5442;
+}
+/* line 86, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.footer .logo {
+  opacity: 0.2;
+}
+/* line 88, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+.footer .line {
+  color: #ddd;
+}
+
+@media screen and (max-width: 667px) {
+  /* line 94, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_header_body_footer.sass */
+  .header .autocol {
+    display: table-cell;
+  }
+}
+/* line 2, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_notice.sass */
+.notice {
+  position: fixed;
+  z-index: 3;
+  min-height: 5em;
+  background: #333333;
+  color: #FFFFFF;
+  display: table;
+  -webkit-animation: in 0.5s ease;
+  -moz-animation: in 0.5s ease;
+  -ms-animation: in 0.5s ease;
+  -o-animation: in 0.5s ease;
+  animation: in 0.5s ease;
+}
+/* line 16, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_notice.sass */
+.notice .autogrid .autocol:first-child {
+  width: 90%;
+  padding: 0 1em 0 0;
+}
+/* line 19, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_notice.sass */
+.notice .autogrid .autocol:last-child {
+  width: 10%;
+}
+/* line 21, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_notice.sass */
+.notice .ion-ios-close-outline {
+  cursor: pointer;
+}
+/* line 24, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_notice.sass */
+.notice .ion-ios-close-outline:hover:before {
+  content: "";
+}
+/* line 26, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_notice.sass */
+.notice.hide {
+  display: none;
+}
+
+@-webkit-keyframes in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 667px) {
+  /* line 58, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_notice.sass */
+  .notice .autocol {
+    display: table-cell;
+  }
+}
+/* line 3, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_pagination.sass */
+.pagination {
+  text-align: center;
+  padding: 1em;
+  margin: 1em 0;
+  border-top: 1px solid #eee;
+}
+/* line 8, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_pagination.sass */
+.pagination a, .pagination .current, .pagination .next_page, .pagination .previous_page {
+  border: 1px solid #AAAAAA;
+  background: transparent;
+  color: #666666;
+  margin: 0.5em 0.25em;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border-radius: 100em;
+  display: inline-block;
+}
+/* line 17, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_pagination.sass */
+.pagination a.current, .pagination a:hover, .pagination .current.current, .pagination .current:hover, .pagination .next_page.current, .pagination .next_page:hover, .pagination .previous_page.current, .pagination .previous_page:hover {
+  background: #AAAAAA;
+  transition: all 0.3s ease-in-out;
+  color: #FFFFFF;
+}
+/* line 21, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_pagination.sass */
+.pagination a.disabled, .pagination .current.disabled, .pagination .next_page.disabled, .pagination .previous_page.disabled {
+  opacity: 0.2;
+  -webkit-opacity: 0.2;
+  filter: brightness(1);
+  -webkit-filter: brightness(1);
+}
+/* line 26, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_pagination.sass */
+.pagination a.disabled:hover, .pagination .current.disabled:hover, .pagination .next_page.disabled:hover, .pagination .previous_page.disabled:hover {
+  background: transparent;
+  color: #AAAAAA;
+}
+/* line 30, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_pagination.sass */
+.pagination .next_page, .pagination .previous_page {
+  padding: 0.5em 2em;
+  min-width: 9em;
+}
+
+/* line 3, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tables.sass */
+table {
+  margin: 1em 0;
+}
+/* line 5, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tables.sass */
+table th {
+  font-weight: 300;
+  color: #AAAAAA;
+  text-align: left;
+}
+/* line 9, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_tables.sass */
+table td, table th {
+  padding: 1em;
+  border-bottom: 1px solid #F9F9F9;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+/* line 3, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_heroes.sass */
+.hero {
+  color: #FFFFFF;
+  background-color: #333333;
+  min-height: 25em;
+  margin-top: -5em;
+  padding-top: 5em;
+}
+/* line 10, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_heroes.sass */
+.hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6 {
+  margin: 20px 0;
+  font-weight: 100;
+  line-height: 1;
+}
+/* line 14, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_heroes.sass */
+.hero h1 {
+  font-size: 3em;
+}
+/* line 16, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_heroes.sass */
+.hero h2 {
+  font-size: 2em;
+}
+/* line 18, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_heroes.sass */
+.hero h3 {
+  font-size: 1.8em;
+}
+/* line 20, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_heroes.sass */
+.hero h4 {
+  font-size: 1.6em;
+}
+/* line 22, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_heroes.sass */
+.hero h5 {
+  font-size: 1.4em;
+}
+/* line 24, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_heroes.sass */
+.hero h6 {
+  font-size: 1.3em;
+}
+/* line 27, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_heroes.sass */
+.hero .section {
+  padding: 5em 1em;
+}
+
+@media screen and (min-width: 1440px) {
+  /* line 32, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_heroes.sass */
+  .hero {
+    min-height: 30em;
+  }
+}
+@media screen and (max-width: 860px) {
+  /* line 37, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_heroes.sass */
+  .hero {
+    min-height: 20em;
+  }
+}
+@media screen and (max-width: 667px) {
+  /* line 42, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_heroes.sass */
+  .hero {
+    min-height: 15em;
+  }
+}
+/* line 5, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_social.sass */
+share-button {
+  font-family: "Helvetica Neue", Helvetica, Sans-Serif;
+  font-weight: 500;
+  font-size: 1em;
+  background: transparent;
+  border: 1px solid #AAAAAA;
+  color: #666666;
+  padding: 0.5em 1em 0.5em 2em;
+}
+/* line 13, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_social.sass */
+share-button:before {
+  top: 0.7em;
+  opacity: 0.5;
+}
+/* line 16, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_social.sass */
+share-button:hover {
+  background: #F9F9F9;
+  color: #333;
+}
+/* line 19, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_social.sass */
+share-button:hover:before {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+/* line 22, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_social.sass */
+share-button .sb-social.sb-center.sb-top {
+  transform: translate(-21.7%, -100%);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* line 3, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.hll {
+  background-color: #ffffcc;
+}
+
+/* line 6, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.c {
+  color: #888888;
+}
+
+/* line 11, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+/* line 17, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.k {
+  color: #008800;
+  font-weight: bold;
+}
+
+/* line 23, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.cm {
+  color: #888888;
+}
+
+/* line 28, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.cp {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+/* line 34, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.c1 {
+  color: #888888;
+}
+
+/* line 39, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.cs {
+  color: #cc0000;
+  font-weight: bold;
+  background-color: #fff0f0;
+}
+
+/* line 46, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+
+/* line 52, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.ge {
+  font-style: italic;
+}
+
+/* line 57, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.gr {
+  color: #aa0000;
+}
+
+/* line 62, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.gh {
+  color: #303030;
+}
+
+/* line 67, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+
+/* line 73, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.go {
+  color: #888888;
+}
+
+/* line 78, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.gp {
+  color: #555555;
+}
+
+/* line 83, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.gs {
+  font-weight: bold;
+}
+
+/* line 88, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.gu {
+  color: #606060;
+}
+
+/* line 93, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.gt {
+  color: #aa0000;
+}
+
+/* line 98, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.kc, .kd, .kn {
+  color: #008800;
+  font-weight: bold;
+}
+
+/* line 106, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.kp {
+  color: #008800;
+}
+
+/* line 111, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.kr {
+  color: #008800;
+  font-weight: bold;
+}
+
+/* line 117, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.kt {
+  color: #888888;
+  font-weight: bold;
+}
+
+/* line 123, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.m {
+  color: #0000DD;
+  font-weight: bold;
+}
+
+/* line 129, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.s {
+  color: #dd2200;
+  background-color: #fff0f0;
+}
+
+/* line 135, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.na {
+  color: #336699;
+}
+
+/* line 140, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.nb {
+  color: #003388;
+}
+
+/* line 145, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.nc {
+  color: #bb0066;
+  font-weight: bold;
+}
+
+/* line 151, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.no {
+  color: #003366;
+  font-weight: bold;
+}
+
+/* line 157, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.nd {
+  color: #555555;
+}
+
+/* line 162, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.ne {
+  color: #bb0066;
+  font-weight: bold;
+}
+
+/* line 168, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.nf {
+  color: #0066bb;
+  font-weight: bold;
+}
+
+/* line 174, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.nl {
+  color: #336699;
+  font-style: italic;
+}
+
+/* line 180, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.nn {
+  color: #bb0066;
+  font-weight: bold;
+}
+
+/* line 186, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.py {
+  color: #336699;
+  font-weight: bold;
+}
+
+/* line 192, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.nt {
+  color: #bb0066;
+  font-weight: bold;
+}
+
+/* line 198, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.nv {
+  color: #336699;
+}
+
+/* line 203, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.ow {
+  color: #008800;
+}
+
+/* line 208, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.w {
+  color: #bbbbbb;
+}
+
+/* line 213, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.mf, .mh, .mi, .mo {
+  color: #0000DD;
+  font-weight: bold;
+}
+
+/* line 222, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.sb, .sc, .sd, .s2 {
+  color: #dd2200;
+  background-color: #fff0f0;
+}
+
+/* line 231, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.se {
+  color: #0044dd;
+  background-color: #fff0f0;
+}
+
+/* line 237, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.sh {
+  color: #dd2200;
+  background-color: #fff0f0;
+}
+
+/* line 243, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.si {
+  color: #3333bb;
+  background-color: #fff0f0;
+}
+
+/* line 249, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.sx {
+  color: #22bb22;
+  background-color: #f0fff0;
+}
+
+/* line 255, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.sr {
+  color: #008800;
+  background-color: #fff0ff;
+}
+
+/* line 261, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.s1 {
+  color: #dd2200;
+  background-color: #fff0f0;
+}
+
+/* line 267, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.ss {
+  color: #aa6600;
+  background-color: #fff0f0;
+}
+
+/* line 273, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.bp {
+  color: #003388;
+}
+
+/* line 278, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.vc {
+  color: #336699;
+}
+
+/* line 283, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.vg {
+  color: #dd7700;
+}
+
+/* line 288, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.vi {
+  color: #3333bb;
+}
+
+/* line 293, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_markdown.sass */
+.il {
+  color: #0000DD;
+  font-weight: bold;
+}
+
+/* line 3, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.align-left {
+  text-align: left;
+}
+
+/* line 5, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.align-right {
+  text-align: right;
+}
+
+/* line 7, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.float-left {
+  float: left;
+}
+
+/* line 9, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.float-right {
+  float: right;
+}
+
+/* line 11, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* line 13, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.inline {
+  display: inline;
+}
+
+/* line 15, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.inline-block {
+  display: inline-block;
+}
+
+/* line 17, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.center {
+  text-align: center;
+}
+
+/* line 19, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.clear {
+  clear: both;
+}
+
+/* line 21, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.hide {
+  display: none;
+}
+
+/* line 23, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.show {
+  display: block;
+  visibility: visible;
+}
+
+/* line 26, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.block {
+  display: block;
+}
+
+/* line 28, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.box {
+  border: 1px solid #F9F9F9;
+  border-radius: 4px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+/* line 33, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.full {
+  width: 100%;
+}
+
+/* line 35, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.radius {
+  border-radius: 4px;
+}
+
+/* line 37, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.round {
+  border-radius: 100em;
+}
+
+/* line 39, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 43, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.space:after {
+  content: " ";
+}
+
+/* line 48, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.i2x {
+  font-size: 2em;
+}
+
+/* line 50, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.i3x {
+  font-size: 3em;
+}
+
+/* line 52, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.i4x {
+  font-size: 4em;
+}
+
+/* line 54, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.i5x {
+  font-size: 5em;
+}
+
+/* line 56, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.same-width {
+  text-align: center;
+  width: 2em;
+  display: inline-block;
+}
+
+/* line 63, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+.code {
+  color: #333333;
+  font-family: "Monaco", Menlo, Courier;
+  font-size: 0.65em;
+  background: #eee;
+  padding: 0.1em 0.5em 0.1em 0.3em;
+  margin: 0 0.3em 0 0.1em;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  top: -0.1em;
+}
+
+@media screen and (max-width: 667px) {
+  /* line 77, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_helpers.sass */
+  .space, .hide-on-mobile {
+    display: none;
+  }
+}
+/* line 5, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", Helvetica Neue, Helvetica, sans-serif;
+}
+
+/* line 10, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.error_explanation {
+  padding: 0.5em 1em;
+  border: 1px solid #D4252A;
+  border-radius: 4px;
+}
+
+/* line 17, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.highlight {
+  background: #F9F9F9;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+}
+/* line 21, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.highlight pre {
+  padding: 0;
+  margin: 0;
+  font-family: "Monaco", Menlo, Courier;
+  font-size: 0.8em;
+}
+
+/* line 29, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.search {
+  padding: 30px;
+}
+
+/* line 33, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.article p {
+  line-height: 1.8;
+}
+
+/* line 38, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.hero {
+  background-size: cover;
+  background-position: center;
+}
+
+/* line 45, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.engineering .hero {
+  box-shadow: none;
+}
+
+/* line 52, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.has-hero .hero h1 {
+  font-weight: 200;
+  margin-bottom: 0;
+  letter-spacing: -1px;
+  background: black;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.3em 0.5em;
+  border-radius: 2px;
+  -webkit-backdrop-filter: blur(1em);
+  backdrop-filter: blur(1em);
+  transition: all 0.3s ease-in-out;
+}
+/* line 63, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.has-hero .hero h2 {
+  font-weight: 100;
+  margin-bottom: 0;
+}
+/* line 66, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.has-hero .hero h1, .has-hero .hero h2 {
+  line-height: 1.18;
+  color: white;
+}
+/* line 69, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.has-hero .hero .author-and-date {
+  color: #eee;
+  font-weight: 100;
+}
+/* line 73, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.has-hero .hero:hover h1 {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* line 78, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.article {
+  color: #333333;
+}
+/* line 80, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.article h1 {
+  margin: 0.5em 0;
+  letter-spacing: -1px;
+  font-size: 2.8em;
+}
+/* line 84, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.article p {
+  font-size: 1.1em;
+}
+/* line 86, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.article p:first-child {
+  margin-top: 0;
+}
+/* line 89, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.article:last-child hr {
+  display: none;
+}
+/* line 92, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.article .meta {
+  color: #AAAAAA;
+  font-size: 0.9em;
+}
+/* line 96, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.article .stick {
+  color: #ddd;
+}
+
+/* line 103, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.articles-list .article {
+  padding: 0 1em;
+  border-left: 2px solid transparent;
+  margin: 0 -1em;
+  transition: all 0.3s ease-in-out;
+}
+/* line 108, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.articles-list .article h1 {
+  font-size: 2.4em;
+}
+/* line 110, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.articles-list .article:hover {
+  border-left-color: rgba(255, 98, 70, 0.3);
+}
+/* line 113, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.articles-list .article-body {
+  max-height: 20em;
+  display: block;
+  display: -webkit-box;
+  margin: 0 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+/* line 123, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.articles-list .hero-secondary {
+  height: 18em;
+  border-radius: 4px;
+  background-size: cover;
+  box-shadow: inset 0 5em 6em rgba(0, 0, 0, 0.4);
+  color: white;
+}
+/* line 129, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.articles-list .hero-secondary h1 {
+  font-weight: 200;
+  background: black;
+  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  padding: 0.2em 0.5em 0.3em 0.5em;
+  margin-bottom: 0;
+  border-radius: 2px;
+  letter-spacing: -1px;
+  -webkit-backdrop-filter: blur(1em);
+  backdrop-filter: blur(1em);
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 144, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.author {
+  padding: 1em 0;
+}
+/* line 146, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.author:nth-child(2n+1) {
+  clear: both;
+}
+/* line 148, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.author h1, .author h2, .author h3, .author h4, .author h5, .author h6, .author p, .author ul, .author ol {
+  margin: 0;
+}
+/* line 150, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.author .avatar {
+  padding-right: 1em;
+  width: 15%;
+}
+/* line 153, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.author .avatar img {
+  min-width: 2em;
+}
+/* line 155, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+.author .meta {
+  width: 85%;
+}
+
+@media screen and (min-width: 1440px) {
+  /* line 162, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+  .has-hero .hero .section {
+    padding: 8em 1em;
+  }
+}
+@media screen and (max-width: 860px) {
+  /* line 169, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+  .has-hero .hero h1 {
+    font-size: 2em;
+  }
+  /* line 171, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+  .has-hero .hero h2 {
+    font-size: 1.6em;
+  }
+
+  /* line 175, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+  .articles [class*='col-'] {
+    width: 100%;
+  }
+
+  /* line 178, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+  .article {
+    padding-right: 1em;
+  }
+  /* line 180, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+  .article h1 {
+    font-size: 2em;
+  }
+  /* line 182, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+  .article h2 {
+    font-size: 1.6em;
+  }
+
+  /* line 187, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+  .articles-list .article h1 {
+    font-size: 1.8em;
+  }
+}
+@media screen and (max-width: 667px) {
+  /* line 194, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+  .article-view .hero .section {
+    padding: 1em;
+  }
+  /* line 196, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+  .article-view .hero h1 {
+    font-size: 2em;
+    margin: 0;
+  }
+
+  /* line 201, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/_custom.sass */
+  .article h1 {
+    font-size: 1.8em;
+  }
+}
