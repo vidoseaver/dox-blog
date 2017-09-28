@@ -1,0 +1,82 @@
+/* line 5, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/components.sass */
+.components .row:nth-child(odd) {
+  background: #F9F9F9;
+}
+/* line 7, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/components.sass */
+.components .row.hero {
+  background: #333333;
+  color: #AAAAAA;
+}
+/* line 10, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/components.sass */
+.components .row.hero a {
+  color: #AAAAAA;
+}
+/* line 12, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/components.sass */
+.components .row.hero h1, .components .row.hero i {
+  margin: 0;
+  font-size: 7em;
+}
+/* line 15, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/components.sass */
+.components .row.hero h1 {
+  color: #FFFFFF;
+}
+/* line 17, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/components.sass */
+.components .row.hero i {
+  color: #FF634D;
+  line-height: 1;
+}
+
+/* line 21, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/components.sass */
+.grid-preview {
+  margin: 2em 0;
+}
+/* line 23, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/components.sass */
+.grid-preview [class*='col-'], .grid-preview .autogrid .autocol {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background: #F9F9F9;
+  font-size: 0.7em;
+  text-align: center;
+  border: 1px solid white;
+  font-family: "Monaco", Menlo, Courier;
+  overflow: hidden;
+}
+/* line 33, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/components.sass */
+.grid-preview .right-only [class*='col-'] {
+  background: linear-gradient(right, #eee 1em, #F9F9F9 1em);
+  background: -webkit-linear-gradient(right, #eee 1em, #F9F9F9 1em);
+}
+
+/* line 37, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/components.sass */
+.empty-grid-preview {
+  margin: 1em 0;
+  padding: 1em 1em 0 1em;
+  background: #F9F9F9;
+}
+
+/* line 43, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/components.sass */
+.forms-preview .col-1-3 {
+  height: 5em;
+}
+
+/* line 48, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/components.sass */
+.fonts ul li {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  padding: 22px;
+  width: 42px;
+  border-radius: 4px;
+  list-style: none;
+  text-align: center;
+  font-weight: normal;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 667px) {
+  /* line 64, /Users/vidoseaver/turing/5/projects/dox_blog/app/assets/stylesheets/components.sass */
+  .formfields-preview .col-1-3 {
+    height: auto;
+  }
+}
